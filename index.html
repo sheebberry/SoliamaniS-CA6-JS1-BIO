@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sheeba Soliamani">
+    <title>Hunter Ninja Bear Game</title>
+<!--Adding a basic style with background color and result in a colored box-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #c5b8eb;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        #gameFinishPage {
+            background-color: rgb(240, 161, 72);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hunter Ninja Bear Game</h1>
+    
+        <!-- Game results when user finishes answering -->
+        <p id="gameFinishPage">Game results will appear here...</p>
+    
+    <script>
+        // welcome + collecting name
+        let playerName = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started:');
+        
+        // greeting player with a small message
+        let greetingMessage = `Hello, ${playerName}! Let\'s Play !!`;
+        alert(greetingMessage);
+        
+        // prompt asking for players choice
+        let playerChoice = prompt('Who are you: Hunter, Ninja, or Bear?');
+        
+        // hard-code for computer to always pick bear
+        let computerChoice = 'Bear';
+        
+        // combining everything together for the result
+        let resultsMessage = playerName + ', You picked ' + playerChoice + '! The computer picked ' + computerChoice + '!';
+        
+        // output the result on to the index.html page
+        document.getElementById('gameFinishPage').innerHTML = resultsMessage;
+        
+        // output the results on the consol log
+        console.log(`${playerName}, You picked ${playerChoice} ! The computer picked ${computerChoice} !`);
+        
+        // Additional console message showing concatenation with + operator
+        console.log('Game completed for player: ' + playerName);
+        
+    </script>
+</body>
+</html>
